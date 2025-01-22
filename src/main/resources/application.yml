@@ -1,0 +1,21 @@
+server:
+  port: 8080
+#  port: ${PORT:8080}
+spring:
+  security:
+    user:
+      email: admin@admin.com
+      password: adminpassword
+      role: ADMIN
+  application:
+    name: authentication-management-app
+  datasource:
+    initialization-mode: always
+    username: admin
+    password: admin1234
+    url: jdbc:mysql://database-1.cdywmmkq01uv.us-east-2.rds.amazonaws.com/authenticationdb
+  jpa:
+    properties:
+      javax.persistence.schema-generation.database.action: update
+jwt:
+  secret: MmRiMmNjNTQzZGEwMmRlODljOTkyYzkzZjczNGE4YzYyYzAyYTIwOTc4MGIyMDBjNDNiNTA4ZjVjOTEzNmRl
